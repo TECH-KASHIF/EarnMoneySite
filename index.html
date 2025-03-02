@@ -1,0 +1,103 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Ads & Earn</title>
+    <style>
+        /* Basic Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #007bff, #00c6ff);
+            color: white;
+        }
+
+        /* Container */
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Points Display */
+        #points {
+            font-size: 24px;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        /* Buttons */
+        button {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* Watch Ad Button */
+        .watch-ad {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .watch-ad:hover {
+            background-color: #218838;
+        }
+
+        /* Complete Task Button */
+        .complete-task {
+            background-color: #ffc107;
+            color: black;
+        }
+
+        .complete-task:hover {
+            background-color: #e0a800;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>💰 Earn Money by Watching Ads & Tasks</h1>
+        <p id="points">Points: 0</p>
+
+        <!-- Watch Ad Button -->
+        <button class="watch-ad" onclick="watchAd()">📺 Watch Ad (Earn 10 Points)</button>
+
+        <!-- Complete Task Button -->
+        <button class="complete-task" onclick="completeTask()">✅ Complete Task (Earn 20 Points)</button>
+    </div>
+
+    <script>
+        let points = 0;
+
+        function updatePoints(amount) {
+            points += amount;
+            document.getElementById("points").innerText = "Points: " + points;
+        }
+
+        function watchAd() {
+            alert("🎬 Simulating Ad Watch... (In real app, show an ad here)");
+            updatePoints(10);
+        }
+
+        function completeTask() {
+            alert("🎯 Task Completed! (In real app, validate task completion)");
+            updatePoints(20);
+        }
+    </script>
+
+</body>
+</html>
